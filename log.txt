@@ -1,0 +1,601 @@
+Microsoft Windows [Version 10.0.16299.98]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+E:\Code\python\heroku\python-getting-started>heroku login
+heroku: Press any key to open up the browser to login or q to exit:
+Opening browser to https://cli-auth.heroku.com/auth/cli/browser/0b1cc91b-de53-4c8a-92e8-1d2034b540d4
+Logging in... done
+Logged in as pritamkhose1@gmail.com
+
+E:\Code\python\heroku\python-getting-started>heroku
+CLI to interact with Heroku
+
+VERSION
+  heroku/7.37.0 win32-x64 node-v12.13.0
+
+USAGE
+  $ heroku [COMMAND]
+
+COMMANDS
+  access          manage user access to apps
+  addons          tools and services for developing, extending, and operating your app
+  apps            manage apps on Heroku
+  auth            check 2fa status
+  authorizations  OAuth authorizations
+  autocomplete    display autocomplete installation instructions
+  base
+  buildpacks      scripts used to compile apps
+  certs           a topic for the ssl plugin
+  ci              run an application test suite on Heroku
+  clients         OAuth clients on the platform
+  config          environment variables of apps
+  container       Use containers to build and deploy Heroku apps
+  domains         custom domains for apps
+  drains          forward logs to syslog or HTTPS
+  features        add/remove app features
+  git             manage local git repository for app
+  help            display help for heroku
+  keys            add/remove account ssh keys
+  labs            add/remove experimental features
+  local           run Heroku app locally
+  logs            display recent log output
+  maintenance     enable/disable access to app
+  members         manage organization members
+  notifications   display notifications
+  orgs            manage organizations
+  pg              manage postgresql databases
+  pipelines       manage pipelines
+  plugins         list installed plugins
+  ps              Client tools for Heroku Exec
+  psql            open a psql shell to the database
+  redis           manage heroku redis instances
+  regions         list available regions for deployment
+  releases        display the releases for an app
+  reviewapps      manage reviewapps in pipelines
+  run             run a one-off process inside a Heroku dyno
+  sessions        OAuth sessions
+  spaces          manage heroku private spaces
+  status          status of the Heroku platform
+  teams           manage teams
+  update          update the Heroku CLI
+  webhooks        list webhooks on an app
+
+
+E:\Code\python\heroku\python-getting-started>heroku apps
+=== pritamkhose1@gmail.com Apps
+pritam-node
+pritam-postgresql
+pritam-python
+pritamkhose
+pritamphp
+
+
+E:\Code\python\heroku\python-getting-started>heroku webhooks
+ »   Error: No app specified
+
+E:\Code\python\heroku\python-getting-started>hroku status
+'hroku' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\Code\python\heroku\python-getting-started>heroku status
+Apps:      No known issues at this time.
+Data:      No known issues at this time.
+Tools:     No known issues at this time.
+
+E:\Code\python\heroku\python-getting-started>heroku app pritam-python
+ »   Warning: app is not a heroku command.
+Did you mean apps? [y/n]:
+ »   Error: Run heroku help for a list of available commands.
+
+E:\Code\python\heroku\python-getting-started>y
+'y' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\Code\python\heroku\python-getting-started>heroku apps pritam-python
+ »   Error: Unexpected argument: pritam-python
+ »   See more help with --help
+
+E:\Code\python\heroku\python-getting-started>heroku container pritam-python
+ »   Error: Unexpected argument: pritam-python
+ »   See more help with --help
+
+E:\Code\python\heroku\python-getting-started>heroku create
+Creating app... done, ⬢ agile-bayou-10879
+https://agile-bayou-10879.herokuapp.com/ | https://git.heroku.com/agile-bayou-10879.git
+
+E:\Code\python\heroku\python-getting-started>git push heroku master
+Enumerating objects: 456, done.
+Counting objects: 100% (456/456), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (203/203), done.
+Writing objects: 100% (456/456), 77.84 KiB | 19.46 MiB/s, done.
+Total 456 (delta 226), reused 456 (delta 226)
+remote: Compressing source files... done.
+remote: Building source:
+remote:
+remote: -----> Python app detected
+remote:  !     Python has released a security update! Please consider upgrading to python-3.7.6
+remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.7.3
+remote: -----> Installing pip
+remote: -----> Installing SQLite3
+remote: Sqlite3 successfully installed.
+remote: -----> Installing requirements with pip
+remote:        Collecting django (from -r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 1))
+remote:          Downloading https://files.pythonhosted.org/packages/55/d1/8ade70e65fa157e1903fe4078305ca53b6819ab212d9fbbe5755afc8ea2e/Django-3.0.2-py3-none-any.whl (7.4MB)
+remote:        Collecting gunicorn (from -r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 2))
+remote:          Downloading https://files.pythonhosted.org/packages/69/ca/926f7cd3a2014b16870086b2d0fdc84a9e49473c68a8dff8b57f7c156f43/gunicorn-20.0.4-py2.py3-none-any.whl (77kB)
+remote:        Collecting django-heroku (from -r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 3))
+remote:          Downloading https://files.pythonhosted.org/packages/59/af/5475a876c5addd5a3494db47d9f7be93cc14d3a7603542b194572791b6c6/django_heroku-0.3.1-py2.py3-none-any.whl
+remote:        Collecting asgiref~=3.2 (from django->-r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 1))
+remote:          Downloading https://files.pythonhosted.org/packages/a5/cb/5a235b605a9753ebcb2730c75e610fb51c8cab3f01230080a8229fa36adb/asgiref-3.2.3-py2.py3-none-any.whl
+remote:        Collecting pytz (from django->-r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 1))
+remote:          Downloading https://files.pythonhosted.org/packages/e7/f9/f0b53f88060247251bf481fa6ea62cd0d25bf1b11a87888e53ce5b7c8ad2/pytz-2019.3-py2.py3-none-any.whl (509kB)
+remote:        Collecting sqlparse>=0.2.2 (from django->-r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 1))
+remote:          Downloading https://files.pythonhosted.org/packages/ef/53/900f7d2a54557c6a37886585a91336520e5539e3ae2423ff1102daf4f3a7/sqlparse-0.3.0-py2.py3-none-any.whl
+remote:        Collecting whitenoise (from django-heroku->-r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 3))
+remote:          Downloading https://files.pythonhosted.org/packages/ae/25/0c8f08c9d3c93192cd286594f1e87b17bab496fb9082c2a69e17051b91fd/whitenoise-5.0.1-py2.py3-none-any.whl
+remote:        Collecting psycopg2 (from django-heroku->-r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 3))
+remote:          Downloading https://files.pythonhosted.org/packages/84/d7/6a93c99b5ba4d4d22daa3928b983cec66df4536ca50b22ce5dcac65e4e71/psycopg2-2.8.4.tar.gz (377kB)
+remote:        Collecting dj-database-url>=0.5.0 (from django-heroku->-r /tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/requirements.txt (line 3))
+remote:          Downloading https://files.pythonhosted.org/packages/d4/a6/4b8578c1848690d0c307c7c0596af2077536c9ef2a04d42b00fabaa7e49d/dj_database_url-0.5.0-py2.py3-none-any.whl
+remote:        Installing collected packages: asgiref, pytz, sqlparse, django, gunicorn, whitenoise, psycopg2, dj-database-url, django-heroku
+remote:          Running setup.py install for psycopg2: started
+remote:            Running setup.py install for psycopg2: finished with status 'done'
+remote:        Successfully installed asgiref-3.2.3 dj-database-url-0.5.0 django-3.0.2 django-heroku-0.3.1 gunicorn-20.0.4 psycopg2-2.8.4 pytz-2019.3 sqlparse-0.3.0 whitenoise-5.0.1
+remote:
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        131 static files copied to '/tmp/build_2e5dd210680ae8dc6e4763cad35b46c7/staticfiles', 398 post-processed.
+remote:
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote:
+remote: -----> Compressing...
+remote:        Done: 55.4M
+remote: -----> Launching...
+remote:        Released v5
+remote:        https://agile-bayou-10879.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+To https://git.heroku.com/agile-bayou-10879.git
+ * [new branch]      master -> master
+
+E:\Code\python\heroku\python-getting-started>pip list
+Package           Version
+----------------- -------
+aniso8601         8.0.0
+asgiref           3.2.3
+astroid           2.3.3
+Click             7.0
+colorama          0.4.3
+dj-database-url   0.5.0
+Django            3.0.2
+django-heroku     0.3.1
+Flask             1.1.1
+Flask-RESTful     0.3.7
+gunicorn          20.0.4
+isort             4.3.21
+itsdangerous      1.1.0
+Jinja2            2.11.1
+lazy-object-proxy 1.4.3
+MarkupSafe        1.1.1
+mccabe            0.6.1
+pip               20.0.2
+psycopg2          2.8.4
+pylint            2.4.4
+pytz              2019.3
+setuptools        41.2.0
+six               1.14.0
+sqlparse          0.3.0
+Werkzeug          0.16.1
+whitenoise        5.0.1
+wrapt             1.11.2
+
+E:\Code\python\heroku\python-getting-started>python manage.py collectstatic
+
+131 static files copied to 'E:\Code\python\heroku\python-getting-started\staticfiles', 411 post-processed.
+
+E:\Code\python\heroku\python-getting-started>heroku local
+[OKAY] Loaded ENV .env File as KEY=VALUE Format
+1:11:30 PM web.1 |  Traceback (most recent call last):
+1:11:30 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\runpy.py", line 192, in _run_module_as_main
+1:11:30 PM web.1 |      return _run_code(code, main_globals, None,
+1:11:30 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\runpy.py", line 85, in _run_code
+1:11:30 PM web.1 |      exec(code, run_globals)
+1:11:30 PM web.1 |    File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\Scripts\gunicorn.exe\__main__.py", line 4, in
+<module>
+1:11:30 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages\gunicorn\app\wsgiapp.py", line 9, in <module>
+1:11:30 PM web.1 |      from gunicorn.app.base import Application
+1:11:30 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages\gunicorn\app\base.py", line
+11, in <module>
+1:11:30 PM web.1 |      from gunicorn import util
+1:11:30 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages\gunicorn\util.py", line 9, in <module>
+1:11:30 PM web.1 |      import fcntl
+1:11:30 PM web.1 |  ModuleNotFoundError: No module named 'fcntl'
+[DONE] Killing all processes with signal  SIGINT
+1:11:30 PM web.1 Exited with exit code null
+
+E:\Code\python\heroku\python-getting-started>python pip install -r requirements.txt
+python: can't open file 'pip': [Errno 2] No such file or directory
+
+E:\Code\python\heroku\python-getting-started>python -m pip install -r requirements.txt
+Requirement already satisfied: django in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from -r requirements.txt (line 1)) (3.0.2)
+Requirement already satisfied: gunicorn in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from -r requirements.txt (line 2)) (20.0.4)
+Requirement already satisfied: django-heroku in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from -r requirements.txt (line 3)) (0.3.1)
+Requirement already satisfied: pytz in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from django->-r
+requirements.txt (line 1)) (2019.3)
+Requirement already satisfied: asgiref~=3.2 in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from django->-r requirements.txt (line 1)) (3.2.3)
+Requirement already satisfied: sqlparse>=0.2.2 in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from
+django->-r requirements.txt (line 1)) (0.3.0)
+Requirement already satisfied: setuptools>=3.0 in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from
+gunicorn->-r requirements.txt (line 2)) (41.2.0)
+Requirement already satisfied: whitenoise in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from django-heroku->-r requirements.txt (line 3)) (5.0.1)
+Requirement already satisfied: dj-database-url>=0.5.0 in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from django-heroku->-r requirements.txt (line 3)) (0.5.0)
+Requirement already satisfied: psycopg2 in c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages (from django-heroku->-r requirements.txt (line 3)) (2.8.4)
+
+E:\Code\python\heroku\python-getting-started>heroku local
+[OKAY] Loaded ENV .env File as KEY=VALUE Format
+1:12:09 PM web.1 |  Traceback (most recent call last):
+1:12:09 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\runpy.py", line 192, in _run_module_as_main
+1:12:09 PM web.1 |      return _run_code(code, main_globals, None,
+1:12:09 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\runpy.py", line 85, in _run_code
+1:12:09 PM web.1 |      exec(code, run_globals)
+1:12:09 PM web.1 |    File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\Scripts\gunicorn.exe\__main__.py", line 4, in
+<module>
+1:12:09 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages\gunicorn\app\wsgiapp.py", line 9, in <module>
+1:12:09 PM web.1 |      from gunicorn.app.base import Application
+1:12:09 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages\gunicorn\app\base.py", line
+11, in <module>
+1:12:09 PM web.1 |      from gunicorn import util
+1:12:09 PM web.1 |    File "c:\users\pritam\appdata\local\programs\python\python38-32\lib\site-packages\gunicorn\util.py", line 9, in <module>
+1:12:09 PM web.1 |      import fcntl
+1:12:09 PM web.1 |  ModuleNotFoundError: No module named 'fcntl'
+[DONE] Killing all processes with signal  SIGINT
+1:12:09 PM web.1 Exited with exit code null
+
+E:\Code\python\heroku\python-getting-started>python manage.py collectstatic
+
+You have requested to collect static files at the destination
+location as specified in your settings:
+
+    E:\Code\python\heroku\python-getting-started\staticfiles
+
+This will overwrite existing files!
+Are you sure you want to do this?
+
+Type 'yes' to continue, or 'no' to cancel: yes
+
+0 static files copied to 'E:\Code\python\heroku\python-getting-started\staticfiles', 131 unmodified, 293 post-processed.
+
+E:\Code\python\heroku\python-getting-started>python manage.py collectstatic
+
+You have requested to collect static files at the destination
+location as specified in your settings:
+
+    E:\Code\python\heroku\python-getting-started\staticfiles
+
+This will overwrite existing files!
+Are you sure you want to do this?
+
+Type 'yes' to continue, or 'no' to cancel: yes
+
+0 static files copied to 'E:\Code\python\heroku\python-getting-started\staticfiles', 131 unmodified, 293 post-processed.
+
+E:\Code\python\heroku\python-getting-started>python manage.py runserver 0.0.0.0:5000
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, hello, sessions.
+Run 'python manage.py migrate' to apply them.
+February 02, 2020 - 13:20:45
+Django version 3.0.2, using settings 'gettingstarted.settings'
+Starting development server at http://0.0.0.0:5000/
+Quit the server with CTRL-BREAK.
+[02/Feb/2020 13:21:06] "GET / HTTP/1.1" 200 7425
+[02/Feb/2020 13:21:06] "GET /static/lang-logo.png HTTP/1.1" 200 2217
+Not Found: /favicon.ico
+[02/Feb/2020 13:21:08] "GET /favicon.ico HTTP/1.1" 404 2208
+[02/Feb/2020 13:22:06] "GET /admin HTTP/1.1" 301 0
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\sessions\backends\base.py", line
+199, in _get_session
+    return self._session_cache
+AttributeError: 'SessionStore' object has no attribute '_session_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: django_session
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in
+inner
+    response = get_response(request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\admin\sites.py", line 249, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\admin\sites.py", line 220, in inner
+    if not self.has_permission(request):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\admin\sites.py", line 194, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\functional.py", line 224, in inner
+    self._setup()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\utils\functional.py", line 360, in _setup
+    self._wrapped = self._setupfunc()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\auth\middleware.py", line 24, in
+<lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\auth\middleware.py", line 12, in
+get_user
+    request._cached_user = auth.get_user(request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\auth\__init__.py", line 173, in get_user
+    user_id = _get_user_session_key(request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\auth\__init__.py", line 58, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\sessions\backends\base.py", line
+64, in __getitem__
+    return self._session[key]
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\sessions\backends\base.py", line
+204, in _get_session
+    self._session_cache = self.load()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\sessions\backends\db.py", line 43, in load
+    s = self._get_session_from_db()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\contrib\sessions\backends\db.py", line 32, in _get_session_from_db
+    return self.model.objects.get(
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 411, in get
+    num = len(clone)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 258, in __len__
+    self._fetch_all()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 1261, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\compiler.py", line 1144, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: django_session
+[02/Feb/2020 13:22:07] "GET /admin/ HTTP/1.1" 500 196675
+Internal Server Error: /db/
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: hello_greeting
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in
+inner
+    response = get_response(request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Code\python\heroku\python-getting-started\hello\views.py", line 15, in db
+    greeting.save()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\base.py", line 745, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\base.py", line 782, in save_base
+    updated = self._save_table(
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\base.py", line 887, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\base.py", line 924, in _do_insert
+    return manager._insert(
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\query.py", line 1204, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\models\sql\compiler.py", line 1384, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\utils.py", line 86, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\db\backends\sqlite3\base.py", line 396, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: hello_greeting
+[02/Feb/2020 13:22:31] "GET /db/ HTTP/1.1" 500 143641
+
+E:\Code\python\heroku\python-getting-started>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, hello, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying hello.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+E:\Code\python\heroku\python-getting-started>python manage.py createsuperuser
+Username (leave blank to use 'pritam'):
+Email address: p.khose@rediffmail.com
+Password:
+Password (again):
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+E:\Code\python\heroku\python-getting-started>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, hello, sessions
+Running migrations:
+  No migrations to apply.
+  Your models have changes that are not yet reflected in a migration, and so won't be applied.
+  Run 'manage.py makemigrations' to make new migrations, and then re-run 'manage.py migrate' to apply them.
+
+E:\Code\python\heroku\python-getting-started>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 02, 2020 - 13:24:54
+Django version 3.0.2, using settings 'gettingstarted.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[02/Feb/2020 13:24:57] "GET / HTTP/1.1" 200 7425
+[02/Feb/2020 13:24:57] "GET /static/lang-logo.png HTTP/1.1" 200 2217
+Not Found: /favicon.ico
+[02/Feb/2020 13:24:57] "GET /favicon.ico HTTP/1.1" 404 2208
+[02/Feb/2020 13:25:17] "GET /admin/ HTTP/1.1" 302 0
+[02/Feb/2020 13:25:17] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1913
+[02/Feb/2020 13:25:17] "GET /static/admin/css/login.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:17] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:17] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:17] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:17] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[02/Feb/2020 13:25:17] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[02/Feb/2020 13:25:21] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[02/Feb/2020 13:25:21] "GET /admin/ HTTP/1.1" 200 3043
+[02/Feb/2020 13:25:21] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:21] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:21] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:21] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /admin/auth/user/ HTTP/1.1" 200 6618
+[02/Feb/2020 13:25:23] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/Feb/2020 13:25:23] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:23] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:25] "GET /admin/auth/user/1/change/ HTTP/1.1" 200 14283
+[02/Feb/2020 13:25:25] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5753
+[02/Feb/2020 13:25:25] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12318
+[02/Feb/2020 13:25:25] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:25] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:25] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:25] "GET /admin/jsi18n/ HTTP/1.1" 200 3223
+[02/Feb/2020 13:25:26] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:26] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[02/Feb/2020 13:25:26] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[02/Feb/2020 13:25:26] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[02/Feb/2020 13:25:26] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:26] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[02/Feb/2020 13:25:26] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[02/Feb/2020 13:25:26] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+Internal Server Error: /db/
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\defaulttags.py", line 1021, in find_library
+    return parser.libraries[name]
+KeyError: 'staticfiles'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\exception.py", line 34, in
+inner
+    response = get_response(request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\Code\python\heroku\python-getting-started\hello\views.py", line 19, in db
+    return render(request, "db.html", {"greetings": greetings})
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\loaders\base.py", line 29, in get_template
+    return Template(
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\base.py", line 477, in parse
+    raise self.error(token, e)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\base.py", line 475, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\defaulttags.py", line 1078, in load
+    lib = find_library(parser, name)
+  File "C:\Users\Pritam\AppData\Local\Programs\Python\Python38-32\lib\site-packages\django\template\defaulttags.py", line 1023, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'staticfiles' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+[02/Feb/2020 13:25:39] "GET /db/ HTTP/1.1" 500 144385
+Not Found: /admin_urls/
+[02/Feb/2020 13:25:55] "GET /admin_urls/ HTTP/1.1" 404 2208
+[02/Feb/2020 13:25:59] "GET /admin/ HTTP/1.1" 200 3043
+[02/Feb/2020 13:25:59] "GET /admin/ HTTP/1.1" 200 3043
