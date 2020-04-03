@@ -70,5 +70,5 @@ def getdata(request):
 
 def listfiles(request):
     folders = [f for f in glob.glob(
-        dirpath + "\\data" + "**/*", recursive=True)]
+        dirpath + "/data" + "**/*", recursive=True)]
     return JsonResponse({'size': len(folders), 'date': datetime.now(), 'result': folders})
