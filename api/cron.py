@@ -15,11 +15,18 @@ from datetime import datetime
 dirpath = os.path.dirname(os.path.realpath(__file__))
 if not os.path.exists(dirpath + '/data'):
     os.makedirs(dirpath + '/data')
+# your functionality goes here
+print(str(dirpath))
+data = { 'date': str(datetime.now()), 'dirpath': str(dirpath), 'msg':'direct'} 
+# Writing to json file
+with open(dirpath + '/data/myfile.json', 'w') as outfile:
+    outfile.write(json.dumps(data))     #  {"date": "2020-04-05 15:09:01.859980"}
 
 def my_cron_job():
+    dirpath = os.path.dirname(os.path.realpath(__file__))
     # your functionality goes here
-    print('my_cron_job')
-    data = { 'date': str(datetime.now())}
+    print('my_cron_job', dirpath)
+    data = { 'date': str(datetime.now()), 'dirpath': str(dirpath), 'msg':'my_cron_job'} 
     # Writing to json file
     with open(dirpath + '/data/myfile.json', 'w') as outfile:
         outfile.write(json.dumps(data))     #   {"date": "2020-04-05 15:09:01.859980"}
